@@ -1,12 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PostComponent from "./PostComponet";
+import StateComponent from "./pages/StateComponent";
+import ErrorBoundary from "./pages/ErrorBoundary";
+import ChildrenComponent from "./pages/ChildrenComponent";
 
-function App() {
+function App () {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo"/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,6 +22,16 @@ function App() {
         >
           Learn React
         </a>
+        <PostComponent/>
+        <StateComponent/>
+        <ErrorBoundary>
+          hah
+        </ErrorBoundary>
+        <ChildrenComponent>
+          {(value) => {
+            return <h1>你很优秀{value}</h1>
+          }}
+        </ChildrenComponent>
       </header>
     </div>
   );
