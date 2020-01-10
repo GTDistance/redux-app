@@ -9,3 +9,11 @@ function HocComponent (WrappedComponent) {
     }
   }
 }
+
+class Visible extends Component {
+  render () {
+    return null
+  }
+}
+
+export default HocComponent(Visible)

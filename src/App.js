@@ -5,6 +5,7 @@ import PostComponent from "./PostComponet";
 import StateComponent from "./pages/StateComponent";
 import ErrorBoundary from "./pages/ErrorBoundary";
 import ChildrenComponent from "./pages/ChildrenComponent";
+import TestVisible from "./pages/TestVisible";
 
 function App () {
   return (
@@ -32,6 +33,7 @@ function App () {
             return <h1>你很优秀{value}</h1>
           }}
         </ChildrenComponent>
+        <TestVisible/>
       </header>
     </div>
   );
