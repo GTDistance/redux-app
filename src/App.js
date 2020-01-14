@@ -6,6 +6,8 @@ import StateComponent from "./pages/StateComponent";
 import ErrorBoundary from "./pages/ErrorBoundary";
 import ChildrenComponent from "./pages/ChildrenComponent";
 import TestVisible from "./pages/TestVisible";
+import ReactHook from "./pages/ReactHookComponent";
+import ReducerHook from "./pages/ReducerHook";
 
 function App () {
   return (
@@ -34,6 +36,8 @@ function App () {
           }}
         </ChildrenComponent>
         <TestVisible/>
+        <ReactHook/>
+        <ReducerHook/>
       </header>
     </div>
   );
