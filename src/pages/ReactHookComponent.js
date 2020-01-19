@@ -1,5 +1,6 @@
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 import ChildFuncCom from "./ChildFuncCom";
+import useRandomColor from "../components/useRandomColor";
 
 function ReactHook () {
   console.info('reactHook')
@@ -15,6 +16,8 @@ function ReactHook () {
   const childClick = useCallback((newName) => {
     setName(newName)
   }, [])
+  const colors = ['blue', 'red', 'black', 'yellow']
+  const [color, changeColor] = useRandomColor(colors, 'red')
   return (
     <div>
       <button onClick={() => setState({ count: count + 1 })}>+</button>
@@ -31,6 +34,10 @@ function ReactHook () {
         }
         onClick={childClick}/>
       {/*<ChildFuncCom name={name} onClick={(newName) => setName(newName)}/>*/}
+      <div style={{ background: color }}>
+        <h1>测试自定义Hook</h1>
+        <button onClick={changeColor}>改变颜色</button>
+      </div>
     </div>
   )
 }
