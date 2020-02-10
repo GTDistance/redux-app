@@ -8,6 +8,7 @@ import ChildrenComponent from "./pages/ChildrenComponent";
 import TestVisible from "./pages/TestVisible";
 import ReactHook from "./pages/ReactHookComponent";
 import ReducerHook from "./pages/ReducerHook";
+import TestPage from "./pages/TestPage";
 
 function App () {
   return (
@@ -25,6 +26,7 @@ function App () {
         >
           Learn React
         </a>
+        <TestPage/>
         <PostComponent/>
         <StateComponent/>
         <ErrorBoundary>
